@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ProVantageGSNGX – Stock Calculator</title>
+  <link rel="stylesheet" href="style.css" />
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf-autotable/3.5.31/jspdf.plugin.autotable.min.js"></script>
+</head>
+<body>
+  <header>
+    <div class="header-top">
+      <img src="logo.png" alt="ProVantageGSNGX Logo" class="logo" />
+      <div class="header-controls">
+        <button id="darkModeToggle" class="toggle-btn">🌙 Dark Mode</button>
+      </div>
+    </div>
+    <h1>ProVantageGS-NGX - Stock Investment Calculator & Trading Record Keeping</h1>
+    
+    <!-- Global Settings Section -->
+    <div class="global-settings">
+      <h3>Global Settings</h3>
+      <div class="settings-row">
+        <div class="setting-item">
+          <label for="commissionRate">Commission Rate (%):</label>
+          <input id="commissionRate" type="number" value="3" min="0" max="100" step="0.1" placeholder="e.g. 3.0">
+        </div>
+        <div class="setting-item">
+          <label for="profitTarget">Profit Target (%):</label>
+          <input id="profitTarget" type="number" value="10" min="0" max="1000" step="0.1" placeholder="e.g. 10.0">
+        </div>
+      </div>
+    </div>
+    
+    <nav>
+      <button id="btnSingle" class="tab">📊 Single Stock</button>
+      <button id="btnMultiple" class="tab">📈 Multiple Stocks</button>
+      <button id="btnTrading" class="tab">📋 Trading Records</button>
+    </nav>
+  </header>
+
+  <main id="view"></main>
+
+  <script src="script.js"></script>
+</body>
+</html>
+
